@@ -1,7 +1,5 @@
 <script>
   import Counter from './Counter.svelte';
-  import welcome from '$lib/images/svelte-welcome.webp';
-  import welcome_fallback from '$lib/images/svelte-welcome.png';
   import { Logo } from '$lib/components/@common';
 </script>
 
@@ -10,41 +8,16 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-  <h1>
-		<Logo size={400} />
-		Your subscription is coming to an end!
+<section class="flex flex-col items-center justify-center flex-[0.6]">
+  <h1 class="w-full flex flex-col items-center justify-center gap-4">
+    <Logo size={400} />
+    <span class="text-center leading-tight">
+      Your subscription is<br />
+      coming to an end!
+    </span>
   </h1>
+
+  <img alt="Man crying" src="https://media1.tenor.com/m/JKLcAm3RvAEAAAAd/cry-oh-no.gif" class="w-96 object-contain" />
 
   <Counter />
 </section>
-
-<style>
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 0.6;
-  }
-
-  h1 {
-    width: 100%;
-  }
-
-  .welcome {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding: 0 0 calc(100% * 495 / 2048) 0;
-  }
-
-  .welcome img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    display: block;
-  }
-</style>
