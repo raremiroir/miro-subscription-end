@@ -1,6 +1,6 @@
 <script>
-  import Header from './Header.svelte';
   import '../app.pcss';
+  import Header from './Header.svelte';
 </script>
 
 <div class="flex flex-col min-h-screen bg-surface-50">

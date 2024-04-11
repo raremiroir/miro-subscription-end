@@ -1,6 +1,6 @@
 <script>
   import Counter from './Counter.svelte';
-  import { Logo } from '$lib/components/@common';
+  import { Logo } from '$lib/components';
 </script>
 
 <svelte:head>
@@ -16,6 +16,10 @@
       coming to an end!
     </span>
   </h1>
+
+	<p>
+		
+	</p>
 
   <img alt="Man crying" src="https://media1.tenor.com/m/JKLcAm3RvAEAAAAd/cry-oh-no.gif" class="w-96 object-contain" />
 
