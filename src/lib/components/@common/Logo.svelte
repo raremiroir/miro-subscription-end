@@ -4,7 +4,7 @@
   export let size = 100;
 </script>
 
-<svg viewBox="0 0 876 320" width={size} xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 876 320" height={size} xmlns="http://www.w3.org/2000/svg">
   <path
     d="M663.38 163.15V233.918H692.37V167.489C692.37 137.903 732.643 137.855 732.643 137.855V109.063C732.643 109.063 721.383 109.564 712.486 111.566C687.258 117.24 663.38 129.685 663.38 163.15Z"
     fill={textColor}

@@ -10,7 +10,7 @@
 
 <section class="flex flex-col items-center justify-center flex-[0.6]">
   <h1 class="w-full flex flex-col items-center justify-center gap-4">
-    <Logo size={400} />
+    <Logo size={150} />
     <span class="text-center leading-tight">
       Your subscription is<br />
       coming to an end!
