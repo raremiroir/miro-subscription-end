@@ -38,7 +38,8 @@
 
 <svelte:head>
   <title>Home</title>
-  <meta name="description" content="Svelte demo app" />
+  <title>Miro - Upgrade Membership</title>
+  <meta name="description" content="Upgrade your Miro subscription today!" />
 </svelte:head>
 
 <section
