@@ -14,9 +14,13 @@ p,
 button {
   cursor: url('/cursor/miro-normal.png'), auto;
 }
-.button-yes:hover {
+.button-yes:hover,
+.button-yes:hover > *,
+.modal-yes,
+.modal-yes * {
   cursor: url('/cursor/miro-happy.png'), auto;
 }
-.button-no:hover {
+.button-no:hover,
+.button-no:hover > * {
   cursor: url('/cursor/miro-sad.png'), auto;
 }

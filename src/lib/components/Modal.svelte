@@ -3,13 +3,21 @@
 
   let dialog: HTMLDialogElement;
 
+  let _class: string = '';
+  export { _class as class };
+
   $: if (dialog && showModal) dialog.showModal();
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
-<dialog bind:this={dialog} on:close={() => (showModal = false)} on:click|self={() => dialog.close()}>
+<dialog
+  bind:this={dialog}
+  on:close={() => (showModal = false)}
+  on:click|self={() => dialog.close()}
+  class="{_class} max-w-xl rounded-xl border-none p-0 backdrop-brightness-50"
+>
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div on:click|stopPropagation>
+  <div on:click|stopPropagation class="p-4">
     <slot name="header" />
     <hr />
     <slot />
@@ -17,7 +25,7 @@
     <button
       type="button"
       on:click={() => dialog.close()}
-      class="px-1 py-0.5 bg-red-100 hover:bg-red-200 active:bg-red-300 transition-all duration-200 ease-out text-red-900 text-xs font-semibold rounded-sm mx-auto mt-4"
+      class="block px-1 py-0.5 bg-red-100 hover:bg-red-200 active:bg-red-300 transition-all duration-200 ease-out text-red-900 text-xs font-semibold rounded-sm mx-auto mt-4"
     >
       close modal
     </button>
@@ -25,18 +33,6 @@
 </dialog>
 
 <style>
-  dialog {
-    max-width: 32em;
-    border-radius: 0.2em;
-    border: none;
-    padding: 0;
-  }
-  dialog::backdrop {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  dialog > div {
-    padding: 1em;
-  }
   dialog[open] {
     animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
@@ -58,8 +54,5 @@
     to {
       opacity: 1;
     }
-  }
-  button {
-    display: block;
   }
 </style>

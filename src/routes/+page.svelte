@@ -116,7 +116,7 @@
   </div>
 </section>
 
-<Modal bind:showModal={yesClicked}>
+<Modal bind:showModal={yesClicked} class="modal-yes">
   <h2 slot="header" class="text-3xl font-bold mb-2 w-full text-center">🎉 Yay! 🥳</h2>
   <div class="flex flex-col">
     <div class="grid grid-cols-2 gap-4 overflow-hidden h-72 my-4">
